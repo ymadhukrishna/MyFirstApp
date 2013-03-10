@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyFirstAppViewController : UIViewController
-
+@interface MyFirstAppViewController : UIViewController{
+    
+    IBOutlet UILabel *HelloWorldlbl;
+    IBOutlet UILabel *UserLbl;
+    IBOutlet UITextField *UserInput;
+}
+- (IBAction)userSubmitAction:(id)sender;
+@property(nonatomic,strong) UILabel *UserLbl ;
+@property(nonatomic,strong) UITextField *UserInput ;
 @end

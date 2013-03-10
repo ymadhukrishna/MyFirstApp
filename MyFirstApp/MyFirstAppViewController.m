@@ -11,8 +11,9 @@
 @interface MyFirstAppViewController ()
 
 @end
-
 @implementation MyFirstAppViewController
+@synthesize UserInput;
+@synthesize UserLbl;
 
 - (void)viewDidLoad
 {
@@ -26,4 +27,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)userSubmitAction:(id)sender {
+    UserLbl.text = UserInput.text ;
+}
 @end
