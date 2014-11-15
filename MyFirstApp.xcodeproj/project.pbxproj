@@ -19,7 +19,6 @@
 		18E506E416ED13AE001D22B1 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E506E216ED13AE001D22B1 /* MainStoryboard_iPhone.storyboard */; };
 		18E506E716ED13AE001D22B1 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E506E516ED13AE001D22B1 /* MainStoryboard_iPad.storyboard */; };
 		18E506EA16ED13AE001D22B1 /* MyFirstAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E506E916ED13AE001D22B1 /* MyFirstAppViewController.m */; };
-		18E506F216ED13AE001D22B1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E506F116ED13AE001D22B1 /* SenTestingKit.framework */; };
 		18E506F316ED13AE001D22B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E506CA16ED13AE001D22B1 /* UIKit.framework */; };
 		18E506F416ED13AE001D22B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E506CC16ED13AE001D22B1 /* Foundation.framework */; };
 		18E506FC16ED13AE001D22B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18E506FA16ED13AE001D22B1 /* InfoPlist.strings */; };
@@ -55,7 +54,6 @@
 		18E506E816ED13AE001D22B1 /* MyFirstAppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFirstAppViewController.h; sourceTree = "<group>"; };
 		18E506E916ED13AE001D22B1 /* MyFirstAppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFirstAppViewController.m; sourceTree = "<group>"; };
 		18E506F016ED13AE001D22B1 /* MyFirstAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFirstAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		18E506F116ED13AE001D22B1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		18E506F916ED13AE001D22B1 /* MyFirstAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyFirstAppTests-Info.plist"; sourceTree = "<group>"; };
 		18E506FB16ED13AE001D22B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		18E506FD16ED13AE001D22B1 /* MyFirstAppTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFirstAppTests.h; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18E506F216ED13AE001D22B1 /* SenTestingKit.framework in Frameworks */,
 				18E506F316ED13AE001D22B1 /* UIKit.framework in Frameworks */,
 				18E506F416ED13AE001D22B1 /* Foundation.framework in Frameworks */,
 			);
@@ -111,7 +108,6 @@
 				18E506CA16ED13AE001D22B1 /* UIKit.framework */,
 				18E506CC16ED13AE001D22B1 /* Foundation.framework */,
 				18E506CE16ED13AE001D22B1 /* CoreGraphics.framework */,
-				18E506F116ED13AE001D22B1 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -200,7 +196,7 @@
 			name = MyFirstAppTests;
 			productName = MyFirstAppTests;
 			productReference = 18E506F016ED13AE001D22B1 /* MyFirstAppTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -209,6 +205,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = MyFirstApp;
+				LastTestingUpgradeCheck = 0600;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Deepika T";
 			};
@@ -422,13 +419,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyFirstApp/MyFirstApp-Prefix.pch";
 				INFOPLIST_FILE = "MyFirstAppTests/MyFirstAppTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -439,13 +436,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyFirstApp/MyFirstApp-Prefix.pch";
 				INFOPLIST_FILE = "MyFirstAppTests/MyFirstAppTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -468,6 +465,7 @@
 				18E5070416ED13AE001D22B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18E5070516ED13AE001D22B1 /* Build configuration list for PBXNativeTarget "MyFirstAppTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +474,7 @@
 				18E5070716ED13AE001D22B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
